@@ -23,14 +23,11 @@ import java.util.List;
 
 public class Downloader {
 
-    public Downloader() {
-    }
-
-    public void getPdf(String resourceId) throws IOException, DocumentException {
+    private void getPdf(String resourceId) throws IOException, DocumentException {
         getPdf(resourceId, "download" + System.nanoTime());
     }
 
-    public void getPdf(String resourceId, String fileName) throws IOException, DocumentException {
+    private void getPdf(String resourceId, String fileName) throws IOException, DocumentException {
         File pdfFile = new File(fileName + ".pdf");
         List<Image> images = new ArrayList<Image>();
         Dimension pageSize = new Dimension();
